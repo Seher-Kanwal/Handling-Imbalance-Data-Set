@@ -21,3 +21,8 @@ Overall, the choice of method to handle imbalanced data sets depends on the spec
 
 
 # Under Sampling
+Undersampling is a resampling technique used to address the issue of imbalanced datasets, where one class is significantly smaller than the other. Undersampling aims to balance the class distribution by reducing the number of samples in the majority class to match that of the minority class.
+
+This can be done in several ways. One simple method is random undersampling, where data points from the majority class are randomly removed until the class distribution is balanced. This can be effective when the majority class has a significant number of redundant or noisy data points. However, random undersampling can also result in loss of information, and important features or patterns may be missed.
+
+Another approach is to use more strategic undersampling techniques, such as cluster-based undersampling or condensed nearest neighbor (CNN) undersampling
