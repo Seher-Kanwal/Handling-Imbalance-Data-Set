@@ -1,4 +1,4 @@
-# Handling-Imbalance-Data-Set:
+# Handling-Imbalance-Data-Set
 
 Handling imbalanced data sets in machine learning is a common challenge that arises when the number of instances in one class is much smaller than the number of instances in the other class. Imbalanced data sets can lead to biased models that perform poorly on the minority class.
 
@@ -44,7 +44,14 @@ While oversampling can be effective in improving the balance of the class distri
 
 
 
+
+
+
 # Whether to use Over or Under Sampling?
+
+![image](https://user-images.githubusercontent.com/92606737/218930208-40ef8706-bbf1-4d0a-8550-388641c1058a.png)
+
+
 Deciding whether to use undersampling or oversampling (or a combination of both) depends on the specific characteristics of the dataset and the problem at hand. Here are some factors to consider:
 
 __Class imbalance ratio__
