@@ -23,6 +23,43 @@ Overall, the choice of method to handle imbalanced data sets depends on the spec
 # Under Sampling
 Undersampling is a resampling technique used to address the issue of imbalanced datasets, where one class is significantly smaller than the other. Undersampling aims to balance the class distribution by reducing the number of samples in the majority class to match that of the minority class.
 
-This can be done in several ways. One simple method is random undersampling, where data points from the majority class are randomly removed until the class distribution is balanced. This can be effective when the majority class has a significant number of redundant or noisy data points. However, random undersampling can also result in loss of information, and important features or patterns may be missed.
+This can be done in several ways. One simple method is random undersampling, where data points from the majority class are randomly removed until the class distribution is balanced. This can be effective when the majority class has a significant number of redundant or noisy data points. 
+However, random undersampling can also result in loss of information, and important features or patterns may be missed.
 
-Another approach is to use more strategic undersampling techniques, such as cluster-based undersampling or condensed nearest neighbor (CNN) undersampling
+Another approach is to use more strategic undersampling techniques, such as cluster-based undersampling or condensed nearest neighbor (CNN) undersampling.
+
+While undersampling can be effective in improving the balance of the class distribution, it can also result in loss of information and may not always produce the best results. Therefore, it is often necessary to try multiple techniques and evaluate their performance to determine the best approach for the specific dataset and problem at hand.
+
+# Over-Sampling
+Oversampling is a resampling technique used to address the issue of imbalanced datasets, where one class is significantly smaller than the other. Oversampling aims to balance the class distribution by increasing the number of samples in the minority class to match that of the majority class.
+
+### Random oversampling
+This can be done in several ways. One simple method is random oversampling, where data points from the minority class are randomly duplicated until the class distribution is balanced. This can be effective when the minority class has a significant number of unique and valuable data points. However, random oversampling can also result in overfitting and may not generalize well to new data.
+
+### SMOTE
+Another approach is to use more strategic oversampling techniques, such as Synthetic Minority Over-sampling Technique (SMOTE). SMOTE is a data synthesis technique that generates new synthetic samples for the minority class by interpolating between pairs of existing minority class data points. This approach helps to create synthetic minority samples that better represent the true distribution of the minority class and can improve the generalization of the model.
+
+### Dis-advantages
+While oversampling can be effective in improving the balance of the class distribution and enhancing the performance of the classifier, it can also result in overfitting and may not always produce the best results. Therefore, it is often necessary to try multiple techniques and evaluate their performance to determine the best approach for the specific dataset and problem at hand.
+
+
+
+# Whether to use Over or Under Sampling?
+Deciding whether to use undersampling or oversampling (or a combination of both) depends on the specific characteristics of the dataset and the problem at hand. Here are some factors to consider:
+
+__Class imbalance ratio__
+
+If the class imbalance ratio is relatively small, i.e., the difference between the number of instances in the minority class and majority class is not very significant, then oversampling may be more appropriate.
+
+__Data size__
+
+If the dataset is small, then undersampling may be more appropriate, as oversampling may lead to overfitting and generalization issues.
+
+__Nature of the data__
+
+The nature of the data can also influence the choice of resampling technique. For example, if the dataset is noisy or contains many irrelevant data points, then undersampling may be more appropriate. On the other hand, if the minority class has a significant number of unique and valuable data points, then oversampling may be more appropriate.
+
+__Evaluation metrics__
+
+The evaluation metrics used to measure the performance of the model can also influence the choice of resampling technique. For example, if the focus is on minimizing false positives, then undersampling may be more appropriate, as it helps to reduce the influence of the majority class. On the other hand, if the focus is on maximizing recall or sensitivity, then oversampling may be more appropriate, as it helps to improve the representation of the minority class.
+
